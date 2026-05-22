@@ -114,7 +114,10 @@ Learner side: home (today's lectures), lecture detail with the "Mark me present"
 
 Instructor side: home (action-first card with "Start session"), live cockpit (roster, filter chips for Present / Absent / Not in room / Left early, per-row override sheet, "End session" button), sessions history, past session detail.
 
-Stitch project: `https://stitch.withgoogle.com/project/6080344267273329802`
+**Links:**
+- Stitch mockups: https://stitch.withgoogle.com/project/6080344267273329802
+- GitHub repo (full code, schema, edge functions, web dashboard scaffold): https://github.com/Ashwini7506/kraftshala
+- Android APK (debug build, install on any Android 8+ device): https://github.com/Ashwini7506/kraftshala/raw/main/dist/kraftshala-debug.apk
 
 Built and shipped as a working Android app on a real device, with the backend wired end-to-end. The full mark-me-present flow saves a real signed record to the database, and the instructor's cockpit shows it live.
 
