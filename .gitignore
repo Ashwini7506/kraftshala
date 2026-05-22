@@ -1,0 +1,25 @@
+# Android
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+*.iml
+
+# Web
+web/node_modules/
+web/.next/
+web/out/
+web/.env.local
+web/.env*.local
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Misc
+.DS_Store
+*.log

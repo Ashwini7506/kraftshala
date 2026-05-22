@@ -1,0 +1,5 @@
+## Copy this to local.properties and fill in your values
+
+sdk.dir=/Users/<you>/Library/Android/sdk
+supabase.url=https://<your-project>.supabase.co
+supabase.anonKey=<your_anon_key_here>

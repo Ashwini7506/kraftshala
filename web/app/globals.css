@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a2e;
+}
+* { box-sizing: border-box; }
+body { background: var(--background); color: var(--foreground); font-family: ui-sans-serif, system-ui, -apple-system, "Inter", sans-serif; }

@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme.Kraftshala" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

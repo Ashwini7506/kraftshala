@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kraftshala Attendance</string>
+    <string name="ble_service_name">Kraftshala — session active</string>
+    <string name="ble_service_description">Tracking attendance for the current session</string>
+</resources>
