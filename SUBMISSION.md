@@ -95,8 +95,99 @@ At the end of every session, the instructor sees a short list of names that the 
 **What the learner does, end to end.**
 Walk in, open app, tap "Mark me present", see a confirmation screen with the time. Three taps, two seconds.
 
+```
+Learner journey
+
+   Walk into classroom
+            │
+            ▼
+   Open Kraftshala app
+            │
+            ▼
+   Today screen
+   "Brand Strategy Deep-Dive — LIVE NOW"
+            │
+            ▼
+   Tap the ongoing lecture card
+            │
+            ▼
+   Lecture detail screen
+   (silently in the background:
+      Bluetooth picks up instructor's beacon
+      GPS confirms learner is on campus
+      "Mark me present" button enables)
+            │
+            ▼
+   Tap "Mark me present"
+            │
+            ▼
+   Phone signs the mark with its private key
+   Backend verifies signature, saves record
+            │
+            ▼
+   Confirmation screen
+   "You're marked in. 11:04 AM"
+            │
+            ▼
+   Back to Today screen
+```
+
 **What the instructor does, end to end.**
 Open app, tap "Start session", roster fills in by itself as learners walk in, review the small flagged list at the end, tap "End session". Everything else is automatic.
+
+```
+Instructor journey
+
+   Enter classroom
+            │
+            ▼
+   Open Kraftshala app
+            │
+            ▼
+   Faculty Today screen
+   "READY TO START — Brand Strategy Deep-Dive"
+            │
+            ▼
+   Tap "Start session"
+            │
+            ▼
+   Bluetooth on?
+       │           │
+       │ no        │ yes
+       ▼           │
+   BT-off prompt   │
+       │           │
+       ▼           │
+   Open settings   │
+       │           │
+       ▼           │
+   Turn on BT      │
+       │           │
+       └───────►───┘
+                   ▼
+   Backend generates fresh session nonce
+   Phone starts broadcasting nonce over Bluetooth
+                   │
+                   ▼
+   Cockpit (live)
+      Roster fills in as learners mark in
+      Filter chips: Present / Absent / Not in room / Left early
+      Tap any row to override (force present / force absent + reason)
+                   │
+                   ▼
+   At session end, review flagged names
+   Call them out, confirm or mark absent
+                   │
+                   ▼
+   Tap "End session"
+                   │
+                   ▼
+   Confirm modal
+   All records lock, audit log entry written
+                   │
+                   ▼
+   Back to Faculty Today
+```
 
 **What we chose not to build.**
 - No face recognition or selfie check. Easy to fake, invasive, and the instructor's own eyes work better.
